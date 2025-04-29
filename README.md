@@ -33,14 +33,14 @@ To build the library and run the benchmark:￼
 - ‎`void check_heap();`: Checks the integrity of the free list using assertions.
 
 ### Implementation Details ￼
- • All memory blocks are aligned to 16 bytes for compatibility and performance.
- • The free list is kept sorted by memory address to simplify merging adjacent blocks.
- • When a large enough block is not available, the library requests a new chunk from the system using ‎`malloc`.
- • Block headers store the size of each block, enabling efficient merging and management.
+- All memory blocks are aligned to 16 bytes for compatibility and performance.
+- The free list is kept sorted by memory address to simplify merging adjacent blocks.
+- When a large enough block is not available, the library requests a new chunk from the system using ‎`malloc`.
+- Block headers store the size of each block, enabling efficient merging and management.
 
-Example ￼￼
+### Example ￼￼
 
-Development Notes ￼
- • Designed for 64-bit systems; uses ‎`uintptr_t` for pointer arithmetic.
- • Extensively tested with the included ‎`bench.c` program.
- • Code style checked with ‎`clint.py`.
+### Development Notes ￼
+- Designed for 64-bit systems; uses ‎`uintptr_t` for pointer arithmetic.
+- Extensively tested with the included ‎`bench.c` program.
+- Code style checked with ‎`clint.py`.
